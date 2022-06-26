@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
 }
 body{
+    
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -39,6 +43,9 @@ header{
     height: 100%;
     border-bottom: 1px solid var(--Line);
 }
+
+/*-------------Boton login-----------*/
+
 .hd-btn{
     margin-right: 10px;
     border: none;
@@ -51,13 +58,18 @@ header{
     cursor: pointer;
     transition: 0.5s;
 }
-
+.hd-btn > p {
+    font-weight: 700;
+}
 .hd-btn:hover{
     border-color: var(--Line);
     color: var(--Red);
     background-color: var(--BG);
     text-shadow: 2px 2px 15px var(--Red);
 }
+
+/*-------------Barra de busqueda-----------*/
+
 .search-bar{
     border: none;
     display: flex;
@@ -74,13 +86,28 @@ header{
     transition: 0.5s;
     
 }
+.search:hover + .search-btn{
+    border-color: var(--Red);
+    color: var(--Red);
+    text-shadow: 1px 1px 10px var(--Red);
+}
 .search:hover{
     border-color: var(--Red);
    
 }
-.search:focus{
+.search-bar .search:focus + .search-btn{
     border-color: var(--Red);
-    box-shadow: 0 1px 10px var(--Red);
+    box-shadow: 0 0 10px var(--Red);
+}
+
+.search-bar .search:focus{
+    border-color: var(--Red);
+    box-shadow: 0 0 10px var(--Red);
+}
+
+.search::placeholder{
+    text-align: center;
+    color: var(--Line);
 }
 
 .search-btn{
@@ -92,11 +119,24 @@ header{
     color: var(--white);
     transition: 0.5s;
 }
+
 .search-btn:hover{
-    border-color: var(--Red);
+    text-shadow: 1px 1px 10px var(--Red);
     color: var(--Red);
     cursor: pointer;
 }
+
+/*-------------Logo-----------*/
+
+.logo{
+    width: 300px;
+    color: var(--Red);
+    text-align: end;
+}
+.logo span{
+    font-weight: 700;
+}
+
 /*----------Final del header*-----------/
 
 /*--------Barra lateral de navegacion---------*/
@@ -109,7 +149,9 @@ nav{
     border-right: 1px solid var(--Line);
     
 }
-
+nav .nav-btn > p {
+    font-weight: 700;
+}
 .nav-btn{
     border: none;
     color: var(--white);
@@ -131,6 +173,8 @@ nav{
 
 /*--------Fin de la barra de navegacion---------*/
 
+/*--------Area de los videos---------*/
+
 main{
     grid-area: main;
     width: 100%;
@@ -150,10 +194,20 @@ main{
     color: var(--white);
     text-align: center;
 }
-.video button{
-    width: 120px;
-    height: 80px;
+.video p{
+    text-align: center;
+    margin-bottom: 13px;
+}
+.video img{
+    margin-bottom: 10px;
+    width: 250px;
+    object-fit: contain;
 }
 .video:hover{
     border-color: var(--Red);
+    color: var(--Red);
+   
+}
+iframe{
+    border:none;
 }
