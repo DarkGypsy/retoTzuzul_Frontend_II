@@ -129,6 +129,9 @@ header{
 /*-------------Logo-----------*/
 
 .logo{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     width: 300px;
     color: var(--Red);
     text-align: end;
@@ -136,7 +139,16 @@ header{
 .logo span{
     font-weight: 700;
 }
-
+.logo > img{
+    width: 3rem;
+}
+.logo > h1{
+    margin-top: 10px;
+}
+.logo:hover{
+    text-shadow: 1px 1px 10px var(--Red);
+    cursor: default;
+}
 /*----------Final del header*-----------/
 
 /*--------Barra lateral de navegacion---------*/
@@ -175,7 +187,7 @@ nav .nav-btn > p {
 
 /*--------Area de los videos---------*/
 
-main{
+.main{
     grid-area: main;
     width: 100%;
     display: grid;
@@ -184,7 +196,7 @@ main{
     grid-template-columns: repeat(4, 20%);
     grid-auto-rows: 30%;
     padding: 20px;
-    gap: 20px;
+    gap: 15px;
 
     
 }
@@ -193,21 +205,66 @@ main{
     border-bottom: 2px solid var(--Line);
     color: var(--white);
     text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: 00.5s;
+}
+.video div{
+    
 }
 .video p{
     text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 }
 .video img{
     margin-bottom: 10px;
     width: 250px;
+    height: 130px;
     object-fit: contain;
 }
 .video:hover{
     border-color: var(--Red);
     color: var(--Red);
-   
+    transform: scale(1.5);
+}
+.video:hover iframe{
+    transform: scale(1);
 }
 iframe{
+    width: 255px;
+    height: 140px;
     border:none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+/*--------cuerpo de los episodios---------*/
+
+.episodios{
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+    "caps info";
+    gap: 15px; 
+}
+.info{
+    grid-area: info;
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    color: var(--white);
+    border-left: 1px solid var(--Line);
+}
+.info img{
+    height: 200px;
+    object-fit: cover;
+    margin: 5px;
 }
