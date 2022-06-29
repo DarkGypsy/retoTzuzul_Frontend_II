@@ -197,6 +197,7 @@ nav .nav-btn > p {
     grid-auto-rows: 30%;
     padding: 20px;
     gap: 15px;
+    row-gap: 45px;
 
     
 }
@@ -209,9 +210,7 @@ nav .nav-btn > p {
     position: relative;
     transition: 00.5s;
 }
-.video div{
-    
-}
+
 .video p{
     text-align: center;
     margin-bottom: 15px;
@@ -227,10 +226,10 @@ nav .nav-btn > p {
     color: var(--Red);
     transform: scale(1.5);
 }
-.video:hover iframe{
+.video:hover .trailer{
     transform: scale(1);
 }
-iframe{
+.trailer{
     width: 255px;
     height: 140px;
     border:none;
@@ -249,7 +248,7 @@ iframe{
     display: grid;
     justify-content: space-around;
     align-content: center;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 85% 13%;
     grid-template-rows: 20% 80%;
     grid-template-areas:
     "sinop info"
@@ -275,11 +274,12 @@ iframe{
     border-left: 1px solid var(--Line);
 }
 .info p{
+    width: 150px;
     padding: 10px;
     font-size: 15px;
 }
 .info img{
-    width: 175px;
+    width: 160px;
     object-fit: cover;
     margin: 10px;
 }
@@ -299,5 +299,46 @@ iframe{
 }
 .cap:hover{
     border-color: var(--Red);
+    text-shadow: 2px 2px 15px var(--Red);
+}
+
+/*-----Fin delcuerpo de los episodios-------*/
+
+/*--------cuerpo del Reproductor---------*/
+.capitulo{
+    grid-area: main;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.repro{
+    border: none;
+    margin: 10px;
+}
+
+.repro_btn{
+    margin-right: 10px;
+    border: none;
+    color: var(--BG);
+    background-color: var(--Red);
+    padding: 10px;
+    width: 100px;
+    border: 1px solid var(--Red);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.repro_btn span{
+    font-size: 10px;
+    font-weight: 700;
+}
+.repro_btn p{
+    font-weight: 700;
+}
+.repro_btn:hover{
+    border-color: var(--Line);
+    color: var(--Red);
+    background-color: var(--BG);
     text-shadow: 2px 2px 15px var(--Red);
 }
