@@ -13,7 +13,7 @@ body{
     display: grid;
     background-color: #1b2021;
     grid-template-columns: 8% 92%;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 15% 80%;
     grid-template-areas:
     "header header"
     "nav main"
@@ -36,6 +36,7 @@ a{
 /*-------------Principio del header-----------*/
 header{
     grid-area: header;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +76,7 @@ header{
     border: none;
     display: flex;
     justify-content: flex-start;
-    width: 80%;
+    width: 70%;
     height: auto;
 }
 .search{
@@ -142,7 +143,7 @@ header{
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    width: 50%;
+    width: 40%;
     color: var(--Red);
     text-align: end;
 }
