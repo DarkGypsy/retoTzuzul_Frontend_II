@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+body{
+    
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    background-color: #1b2021;
+    grid-template-columns: 8% 92%;
+    grid-template-rows: 15% 85%;
+    grid-template-areas:
+    "header header"
+    "nav main"
+    
+    
+}
+
+:root{
+    --white:#f5f5f5;
+    --BG: #1b2021;
+    --Line: #717c89;
+    --Red: #f34213;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.5s;
+}
+/*-------------Principio del header-----------*/
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+    border-bottom: 1px solid var(--Line);
+}
+
+/*-------------Boton login-----------*/
+
+.hd-btn{
+    margin-right: 10px;
+    border: none;
+    color: var(--BG);
+    background-color: var(--Red);
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--Red);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hd-btn > p {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.hd-btn:hover{
+    border-color: var(--Line);
+    color: var(--Red);
+    background-color: var(--BG);
+    text-shadow: 2px 2px 15px var(--Red);
+}
+
+/*-------------Barra de busqueda-----------*/
+
+.search-bar{
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    height: auto;
+}
+.search{
+    padding: 5px;
+    width: 50%;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid var(--Line);
+    background-color: transparent;
+    outline: none;
+    color: var(--white);
+    transition: 0.5s;
+    
+}
+.search:hover + .search-btn{
+    border-color: var(--Red);
+    color: var(--Red);
+    text-shadow: 1px 1px 10px var(--Red);
+}
+.search:hover{
+    border-color: var(--Red);
+   
+}
+.search-bar .search:focus + .search-btn{
+    border-color: var(--Red);
+    box-shadow: 0 0 10px var(--Red);
+}
+
+.search-bar .search:focus{
+    border-color: var(--Red);
+    box-shadow: 0 0 10px var(--Red);
+}
+
+.search::placeholder{
+    text-align: center;
+    color: var(--Line);
+}
+
+.search-btn{
+    border: solid var(--Line);
+    border-width: 1px 1px 1px 0;
+    width: 5%;
+    height: 100%;
+    background-color: var(--BG);
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.search-btn > span{
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+}
+
+.search-btn:hover{
+    text-shadow: 1px 1px 10px var(--Red);
+    color: var(--Red);
+    cursor: pointer;
+}
+
+/*-------------Logo-----------*/
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 50%;
+    color: var(--Red);
+    text-align: end;
+}
+.logo span{
+    font-weight: 700;
+}
+.logo > img{
+    width: 10%;
+    height: 30%;
+}
+.logo > h1{
+    margin-top: 10px;
+    font-size: 2.5rem;
+}
+.logo:hover{
+    text-shadow: 1px 1px 10px var(--Red);
+    cursor: default;
+}
+/*----------Final del header*-----------/
+
+/*--------Barra lateral de navegacion---------*/
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-auto-rows: 15%;
+    background-color: var(--BG);
+    padding: 5%;
+    width: 100%;
+    height: auto;
+    border-right: 1px solid var(--Line);
+    
+}
+nav .nav-btn > p {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.nav-btn{
+    border: none;
+    color: var(--white);
+    background-color: transparent;
+    padding: 5%;
+    width: 100%;
+    border-bottom: 1px solid var(--Line);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+.nav-btn:hover{
+    box-shadow: inset 0 -3px 0.5px var(--Red);
+    color: var(--Red);
+    text-shadow: 1px 1px 10px var(--Red);
+}
+
+
+/*--------Fin de la barra de navegacion---------*/
+
+/*--------Area de los videos---------*/
+
+.main{
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(15% , 20%));
+    grid-auto-rows: 35%;
+    padding: 1%;
+    gap: 10%;
+    
+
+    
+}
+.video{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid var(--Line);
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: 00.5s;
+}
+
+.video p{
+    text-align: center;
+    margin-bottom: 5%;
+}
+.video img{
+    margin-bottom: 5%;
+    width: 90%;
+    height: 40%;
+    object-fit: contain;
+}
+.video:hover{
+    border-color: var(--Red);
+    color: var(--Red);
+    transform: scale(1.5);
+}
+.video:hover .trailer{
+    transform: scale(1);
+}
+.trailer{
+    width: 100%;
+    height: 70%;
+    border:none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+/*--------cuerpo de los episodios---------*/
+
+.episodios{
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-columns: 85% 13%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    "sinop info"
+    "caps info";
+   
+}
+.sinopsis{
+    grid-area: sinop;
+    width: 100%;
+    color: var(--white);
+    border-bottom: 1px solid var(--Line);
+}
+.sinopsis p {
+    padding: 5px;
+    font-size: 15px;
+}
+.sinopsis h2{
+    margin: 5px;
+}
+.info{
+    grid-area: info;
+    color: var(--white);
+    border-left: 1px solid var(--Line);
+}
+.info p{
+    width: 150px;
+    padding: 10px;
+    font-size: 15px;
+}
+.info img{
+    width: 160px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.capitulos{
+    grid-area: caps;
+    width: 100%;
+    color: var(--white);
+    padding: 10px;  
+}
+
+.cap{
+    border: 1px solid var(--Line);
+    padding: 5px;
+    color: var(--Red);
+    margin-top: 10px;
+}
+.cap:hover{
+    border-color: var(--Red);
+    text-shadow: 2px 2px 15px var(--Red);
+}
+
+/*-----Fin delcuerpo de los episodios-------*/
+
+/*--------cuerpo del Reproductor---------*/
+.capitulo{
+    grid-area: main;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.repro{
+    border: none;
+    margin: 10px;
+}
+
+.repro_btn{
+    margin-right: 10px;
+    border: none;
+    color: var(--BG);
+    background-color: var(--Red);
+    padding: 10px;
+    width: 100px;
+    border: 1px solid var(--Red);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.repro_btn span{
+    font-size: 10px;
+    font-weight: 700;
+}
+.repro_btn p{
+    font-weight: 700;
+}
+.repro_btn:hover{
+    border-color: var(--Line);
+    color: var(--Red);
+    background-color: var(--BG);
+    text-shadow: 2px 2px 15px var(--Red);
+}
