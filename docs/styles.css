@@ -270,9 +270,9 @@ nav .nav-btn >span{
     grid-area: main;
     width: 100%;
     display: grid;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-content: center;
-    grid-template-columns: 85% 13%;
+    grid-template-columns: 80% 15%;
     grid-template-rows: 20% 80%;
     grid-template-areas:
     "sinop info"
@@ -286,40 +286,43 @@ nav .nav-btn >span{
     border-bottom: 1px solid var(--Line);
 }
 .sinopsis p {
-    padding: 5px;
-    font-size: 15px;
+    padding: 2%;
+    font-size: 0.4rem;
 }
 .sinopsis h2{
     margin: 5px;
 }
 .info{
     grid-area: info;
+    width: 80%;
     color: var(--white);
     border-left: 1px solid var(--Line);
 }
 .info p{
-    width: 150px;
-    padding: 10px;
-    font-size: 15px;
+    width:fit-content ;
+    padding: 10%;
+    font-size: 0.4rem;
 }
 .info img{
-    width: 160px;
+    width: 100%;
     object-fit: cover;
-    margin: 10px;
+    margin: 10%;
 }
 
 .capitulos{
     grid-area: caps;
     width: 100%;
     color: var(--white);
-    padding: 10px;  
+    padding: 2%; 
 }
 
 .cap{
+    width: 100%;
     border: 1px solid var(--Line);
     padding: 5px;
     color: var(--Red);
     margin-top: 10px;
+    font-size: 0.4rem;
 }
 .cap:hover{
     border-color: var(--Red);
